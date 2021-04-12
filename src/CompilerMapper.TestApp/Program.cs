@@ -6,7 +6,10 @@ namespace CompilerMapper.TestApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            IMapper mapper = new Mapper();
+
+            var produtDto = mapper.Map(new Product { Id = 10 });
+            Console.WriteLine(produtDto.Id);
         }
     }
 }
